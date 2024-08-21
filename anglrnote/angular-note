@@ -1,0 +1,141 @@
+it is a frame work.
+contain predefined methods can do design by following this
+basic is javascript lang.
+used for client server side
+typescript is a superset of javascript.
+
+
+setup:
+vscode is using as code editor.
+
+
+for including/import third party codes, package manager is needed.
+here we using node package manager.
+
+npm.
+
+version more than 12 is needed for angular.
+javascript is dynamic type language.
+eg:declared 3 variables,if one value is assigned one variable. den value changed to same variable.it doesnot find error.
+interface is not there.
+
+
+so type script developed it is superscript of javascript.
+broswer contain javascript engine only.so convertinng typescript into javascript called transpiling.
+angular also using real dom.
+for writing in angular,typescript is using.
+
+
+
+angular installation:
+ sudo npm install -g @angular/cli
+
+ To know version:npm version
+
+ to find angular version: ng version
+ npm i -g @angular/cli
+
+
+demo project in angular:
+ng new projectname
+eg: ng new demo
+
+routing:
+routing should be enabled if our webpages contain more than one pages.
+it should be permitted while doing project.
+angular wll automatically create a folder.
+
+ 
+
+
+
+
+
+
+
+
+for mongodb:64 bit is needed.(windows)
+
+
+
+
+
+
+
+angular projuct modules
+
+
+
+our project should always in running state
+ never close that.
+
+ browswers listrc: angular and other browsers compatibility is in this file.
+
+ editorconfig:
+ the configrtn btween angular and vscode
+
+ .gitignore:all these not added into gitignore
+
+angularjson: command line interface
+karma.conf.js:testing tool.
+package.json:npm configuration file.
+
+third party library code contain into our package-that is third party wriiten code can use in our project
+
+tsconfig:typescript files
+
+
+all these are automatically come when project installed
+
+e2e is for testing:
+node_modules:  keep a copy if we are uusing third party  library code
+
+
+src is a sourcecode:
+test.ts:for test
+style.css -if more than one webpages, global style can use with the help of style.css
+index.html:application entry file
+
+angular contain atleast 1 module:
+
+main.ts:import external file
+our module name is the name inside bootstrap module in main.ts
+rootmodule is appmodule.
+
+first angular goto main.ts then app.modulee.ts then @decoration
+
+
+angular
+
+program code is run by angularcli
+so third party server is giving compiling.not browser.but they are using the real dom
+so output is in webpage's browser.
+so they will convert into javascript.
+golive will not compile.
+ so server is in running state.
+ np serve --open
+
+
+ components are angular bulding block.for designing we should have html file.
+ when we creating components we will get 4 files.
+
+
+
+in appmodule.ts who is inside bootstrap,that is our root component.
+
+approot in index.html show dat corresponding html page.that is app.component.html
+so,selector will work in corresponding html page.that selector move to corresponding html.
+
+for creating new component:
+ ng g c test
+ {ng generate component component_name}
+
+ if we want to remove any component,we should do it manually.
+ remove the component first.
+ go to app.module.ts - remove testcomponents
+ check errors,and remove each wherever deleted files exist.
+ 
+
+
+
+

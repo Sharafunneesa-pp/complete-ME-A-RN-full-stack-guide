@@ -1,0 +1,234 @@
+                      Angular -front end technoloy
+
+            basic commands:
+
+ 1. to create project:
+
+ ng new projectname / new ng projectname --routing
+
+
+ 2. to run angular project-
+
+ ng serve --open: here btdefault come in brouser
+  or 
+ ng serve
+
+
+
+ 3. to generate component-
+
+ ng g c componentname
+
+ 4.to generate service-
+
+ ng g s serviceName
+
+
+
+
+
+                    building blocks:
+
+ 1. module:
+  to import libraries ( root module )
+
+2. component:
+it is used to create html view
+
+while creating component 4 file added
+{html,css,ts,specification}
+
+default component :root component is there named app component
+
+3.data binding
+share data inside a component.
+  3.1 one way binding:-data sharing only in one direction
+
+   3.1.1 component (ts) to view(html)
+
+    3.1.1.1 string interpolation - {{expression}}
+    3.1.1.2 property binding - [attribute name] = "property name"
+
+  3.1.2 view(html ) to component(ts)
+
+    3.1.2.1 event binding - (event-name)="function name()"
+    change event
+    3.1.2.2 event binding  using $event- (event-name)="function name($event)"
+    $event is a property.
+    type should be mentioned in typescript.
+    if we dont know the type specify "any"
+    3.1.2.3 Using template referencing variable -#variable-name
+
+3.2 two way binding- data sharing in both direction at the same time
+
+ 3.2.1 ngmodel -  mgmodel should be imported.
+ ie, formmodule in appmodule should be imported.
+ syntax: [(ngmodel)]="variable-name"
+ name attribute should be set
+
+
+
+
+ 4. Angular routing
+   to set path for component in approutingmodule.ts.
+   routes class is used to set path.
+   -use router-outlet selector in root component.(app component.html)
+
+
+5. Dependency injection - if two depended class want to communicate, take that class instance and assign to one object.
+ 
+
+dependency injection inside constructor in login component.ts.
+syntax:
+create : constructor()
+define property(variable) as constructor parameter.
+
+mention access specifier.by default its public.
+then in html,this.router.navigateByUrl('location')
+
+
+new component:
+create component first,
+set path in app router,
+in login html page,for directing, use routerlink instead of href.but both work.
+
+
+
+after creating service:
+after creating service- take service file.
+
+
+copied database from login to dataservice.ts
+then define register function
+
+
+
+ngSubmit-page will "submit" even a enter button pressed.
+
+
+advanced bootstrap: material bootstrap
+
+
+
+6. angular service
+7. ngsubmit
+8. angular directives :to manipulate dom structures
+  8.1 - component directives
+  8.2 - structural directives-changing the structure of html page
+                 prefixed  by *
+
+
+                 syntx: *ngFor
+      8.2.1 *ngFor- same working like for but in html
+      8.2.2 *ngIf-
+
+  8.3 - Attribute directives
+
+  ngClass is one of the builtin
+
+
+9.Angular forms
+  9.1 - template driven forms: first esign html
+  9.2 - model driven forms-user input validation-design modeling ts file
+        9.2.1 Reactive forms- validation easy
+        needs- form group,array,control.
+        library is available - w should import that library -
+        import ReactiveFormsModule
+        inside that methods there.help for creating form group,form control,array.
+
+
+do dependency injection in ts file.formbuilder is a classinside angularforms
+inject formbuilder,-it is for creating instance.
+
+create a model- that means property of clas in ts file.
+
+group is used for creating model
+group will get from form builder,
+then take corresponding html page.
+
+aftr creating model-create empty array for corresponding attribute.
+aftr that binding that model with html page.
+form control is using for that.
+do property binding in form with formgroup attribute in corresponding html file.
+form group is an attrribute of form tag. binding it with group name in ts file.
+
+
+
+for validation,there is a class in angular caled "Validators"
+there are alot of built-in validators available in it.
+check angular official page for it
+
+10. local storage:
+
+
+
+10.1 setitem
+10.2 getitem
+10.3 removeitem
+
+
+11. parent child communication
+  11.1 parent to child - input decorator
+  11.2 child to parent - output decorator
+
+
+
+
+
+create button first
+create component
+create view yes or no
+it should be display when button clicked:
+one method is:
+share value from delete button to child.
+when child receiving view that html page
+
+
+
+1. create a variable in parent page
+2.when delete press, the value in local storage put to that variable
+3. pass that value to child:
+via,in html page,proprty biding [],
+by using selector.
+so, item is the child  class attribute.so pass that in inputdecorator in ts file.
+  on the basis of item display,so put that in html property using ngif.
+
+
+
+
+
+
+
+
+parent -child data sharing:
+inside angular,if any parent,child relation,
+
+
+
+
+12. Angular pipe
+     changing format:
+     angular.io is the site to search
+
+
+npm init for creating 3rd party package,json
+npm i express for  creating express
+
+
+13. front end and serve side integration
+
+       13.1  Import http clientmodule
+       13.2 inject httpclientodule
+       13.3 call api using http
+
+ 14. asynchronous call- RxJS
+  14.1 Observable -
+
+
+    14.1.1 resolved - subscribe()
+    14.1.2 reject- catch()
+
+    
+
+
+
