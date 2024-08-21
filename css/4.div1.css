@@ -1,0 +1,25 @@
+div{
+    /* width:500px; */
+    width:50%;
+    height:300px;
+    background-color: aquamarine;
+}
+p{
+    color:brown;
+}
+/* descendant selecter */
+div p{
+    text-align: center;
+    text-decoration:underline
+
+}
+
+
+
+
+div #p1
+{
+    color:rgb(64, 23, 199);
+    text-align: center;
+    text-decoration: none;
+}

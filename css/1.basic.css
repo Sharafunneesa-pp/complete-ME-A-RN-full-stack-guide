@@ -1,0 +1,48 @@
+/* external css */
+/* make connection 
+for linking,link tag should use in header of .html file */
+/* css selector
+ method 1- using same tag name  eg:p */
+p{
+   /* property:value; */
+   border : 3px dotted green ; 
+   color : rgb(149, 12, 149);
+}
+
+
+
+
+/* css selecter  method 2 for selecting id use # before id*/
+#p2{
+   border: 3px double yellow;
+   font-size: 20px;
+
+}
+#p1{
+   color: blueviolet;
+   font-style: italic;
+}
+
+
+
+
+
+/* method 3: using class  -using . operator*/
+.c1{
+   font-style: italic;
+}
+
+
+/* universal selector :* operator so that we can select all tags */
+*{
+   text-align: center;
+}
+
+
+
+
+
+/* method 4: grouping selector */
+h2,h3,h4{
+background-color: peachpuff;
+}

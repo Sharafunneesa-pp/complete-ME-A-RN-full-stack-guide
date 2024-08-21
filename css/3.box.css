@@ -1,0 +1,12 @@
+div{
+    background-color: blueviolet;
+    width: 400px;
+    height: 500px;
+    margin-left: 350px;
+    border: 5px solid black;
+}
+
+
+p{
+    padding: 100px;
+}

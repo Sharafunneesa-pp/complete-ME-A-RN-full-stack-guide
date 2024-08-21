@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sevillana&display=swap');
+div{
+    background-color: brown;
+    position: sticky;
+    top: 0px;
+    font-family: 'Lobster', cursive;
+    font-size:50px;
+
+
+}
+#p1{
+    font-family: 'Sevillana', cursive;
+    font-size:40px;
+}
+/* for background image */
+body{
+    background:url("./images/images4.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
