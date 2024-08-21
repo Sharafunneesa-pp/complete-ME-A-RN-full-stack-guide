@@ -1,0 +1,56 @@
+javascript engine:
+there is a memory for holding javascript code
+that memory is heap in javascript
+if there is any function call,it is going to stack(call stack)
+
+
+there is a seperayte section for asynchronous called webapi
+all these executed in a time delay.
+
+there is webqueue called call queue
+
+
+
+"ajax method means calling api using javascript"
+
+api
+
+ajax used to call api using javascript.
+1.ajax :asynchronous js and xml
+(line by line execution is  called synchronous)
+
+there are so many method in ajax for calling api
+
+1.1  XMLHttpRequest:
+
+this is an old method.
+another method is there its called fetch.
+
+
+
+
+
+
+Ajax -asynchronous js and xml
+
+1.1 XMLHttpRequest
+
+2.response status
+
+
+1xx- information
+2xx-success
+3xx-redirection
+4xx-client error
+5xx=server error
+
+
+
+for asynchronous event:
+promise is a method used by javascript
+for eg:sending request,and response of request is in resolved state
+if not response there then it is in reject state
+then is a method contain the response method
+reject is in catch state.
+
+

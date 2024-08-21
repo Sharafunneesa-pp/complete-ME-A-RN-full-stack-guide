@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+</head>
+
+<body>
+    <h1>
+        ALL TODOS
+    </h1>
+
+    <TABLE border="2">
+        <thead>
+            <tr>
+                <th>User Id</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody id="result">
+
+        </tbody>
+    </TABLE>
+</body>
+<script>
+
+    // AJAX -using xmlhttp request
+    // 1.create object class XMLHttpRequest
+    var req = new XMLHttpRequest()
+    // 2.connnect/call api using XMLHttpRequest object
+    req.open('get', 'https://jsonplaceholder.typicode.com/todos')
+
+    // 3.send request to server
+    // object name.send() method
+    req.send()
+    // console.log(req.responseText);
+
+    // 4.update request onReadyStateChange
+    req.onreadystatechange = () => {
+        if (req.readyState == 4) {
+            if (req.status > 199 && req.status < 300) {
+                // console.log(req.responseText);
+                let todos = JSON.parse(req.responseText)
+                // console.log(todos)
+                displayData(todos)
+
+            }
+            else {
+                console.log("failed to fetch data...")
+            }
+        }
+    }
+    //  display data in the html
+    function displayData(todos) {
+        htmlData = ``
+        for (let todo of todos) {
+            htmlData = `<tr>
+        <td>${todo.userId}</td>
+        <td>${todo.id}</td>
+        <td>${todo.title}</td>
+        <td>${todo.completed}</td>
+        </tr>`
+            result.innerHTML += htmlData
+
+
+        }
+    }
+</script>
+
+</html>

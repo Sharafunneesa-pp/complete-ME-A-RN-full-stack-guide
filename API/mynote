@@ -1,0 +1,25 @@
+there are synchronous and asynchronous call
+
+if it is synchronus it will go into call stack directly
+
+asynchronous are a type like there need delay in execution .web api is handling that,
+so if there is any asynchronous function it will go into call queue(based on the time given as a paremeter)
+
+from call queue only it goes to call stack.but it cannot go directly into call stack.
+call stack should be empty.so for that we are using " event loop ".
+
+event loop will check whether stack empty or not.
+if empty it will go one by one and do execution.
+
+
+
+javascript is a synchronous language only.but it can behave like asychrnous using web api.
+all asynchronous functioncalls (eg:settimeout) will go into web api.from there it will go intoweb ipi.from there it insert into queue and using event loop it check whether it is emplty stack
+if stack empty,it will enteredv into it.
+
+
+client sending request to server.
+so there should be definitely a time delay for getting response.so such request can handle only by asynchronous way.
+
+
+

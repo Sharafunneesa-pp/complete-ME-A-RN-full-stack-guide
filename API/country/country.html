@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>country</title>
+</head>
+<body>
+    <div class="container">
+        <!-- input row -->
+        <div class="row mt-5">
+            <div class="col-4"></div>
+            <div class="col-4 p-5">
+                <form action="" class="border p-5">
+                <input type="text" placeholder="enter country name here" id="cName" class="form-conrl">
+                <input  class="btn btn-primary mt-3" type="button" value="search" onclick="search()">
+            </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <!-- output row -->
+        <div class="row mt-5">
+            <div class="col-4"></div>
+            <div class="col-4" id="result">
+
+
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function search()
+    {
+        country = cName.value
+        fetch(`https://restcountries.com/v2/name/${country}?fullText=true`)
+        .then(result=>result.json())
+        .then(data=>displayData(data))
+        .catch("failed to fetch the data")
+    }
+    function displayData(countryDetails)
+    {
+        cName=countryDetails[0].name
+        capital=countryDetails[0].capital
+        population=countryDetails[0].population
+        currency=countryDetails[0].currencies[0].name
+        symbol=countryDetails[0].currencies[0].symbol
+        language=countryDetails[0].languages[0].name
+        flag=countryDetails[0].flag
+
+        htmlData=`<div class="card" style="width: 100%;">
+  <img src=${flag} class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${cName}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Capital :${capital}</li>
+    <li class="list-group-item">Population :${population}</li>
+    <li class="list-group-item">Currency :${currency} , ${symbol}</li>
+    <li class="list-group-item">Language :${language}</li>
+
+  </ul>
+ 
+</div>`
+    result.innerHTML= htmlData
+    }
+</script>
+</html>
