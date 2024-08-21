@@ -1,0 +1,35 @@
+when a user entered login and password it goes to server as request
+api is s/w used to connect two application and connecting
+http request:
+
+get = fetch;-no changes doing only fetching data
+post=-create ;-storing there in server
+put =  full changes
+patch = partialy changing data
+delete = deleting
+
+
+<!-- api is  url doing all these request -->
+
+secured data in header:(http request header)
+sharing data inside body
+
+json is the language that understandable to every language
+its a key value pair and key should be string type
+<!-- server is for resolving client request -->
+
+api connect client and server
+"json placeholder":is an api
+
+this api will connect with the backend
+this backend will work as server
+
+
+another one:api setu cowin
+
+ajax:
+calling api using javascript
+asynchronous javascript and xml.
+
+
+
